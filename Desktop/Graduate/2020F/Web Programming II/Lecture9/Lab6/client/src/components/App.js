@@ -5,6 +5,7 @@ import { ApolloClient, HttpLink, InMemoryCache, ApolloProvider } from '@apollo/c
 import Home from './Home';
 import MyBin from './My-bin';
 import MyPosts from './My-posts';
+import NewPost from './New-post';
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -35,7 +36,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/my-bin" component={MyBin} />
           <Route path="/my-posts" component={MyPosts} />
-          {/* <Route path="/new-post" component={ } /> */}
+          <Route path="/new-post" component={NewPost} />
         </div>
       </Router>
     </ApolloProvider>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import queries from '../queries';
 import ShowPosts from './ShowPosts';
@@ -16,12 +17,12 @@ function MyPosts() {
 
     return (
         <div>
+            <br />
+            <Link to="/new-post">Upload a post</Link>
+            <br />
+            <br />
             {userPostedImages.map((image) => {
-                return (
-                    <div key={image.id}>
-                        <ShowPosts image={image} />
-                    </div>
-                );
+                return <ShowPosts image={image} postPage={true} key={image.id} />
             })}
         </div>
     )

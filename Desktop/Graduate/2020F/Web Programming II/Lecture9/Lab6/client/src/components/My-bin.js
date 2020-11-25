@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useQuery, useMutation } from '@apollo/client';
+import React from 'react';
+import { useQuery } from '@apollo/client';
 import queries from '../queries';
 import ShowPosts from './ShowPosts';
 
@@ -17,9 +17,7 @@ function MyBin() {
     return (
         <div>
             {binnedImages.map((image) => {
-                return (
-                    <ShowPosts image={image} />
-                );
+                return <ShowPosts image={image} key={image.id} />
             })}
         </div>
     )

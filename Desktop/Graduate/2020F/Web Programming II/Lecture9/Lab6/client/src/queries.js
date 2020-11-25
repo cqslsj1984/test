@@ -67,7 +67,7 @@ const UPDATE_BINNEDIMAGES = gql`
 
 const DELETE_USERPOSTEDIMAGES = gql`
     mutation ($id: ID!) {
-        uploadImage(id: $id) {
+        deleteImage(id: $id) {
             id
             url
             posterName
